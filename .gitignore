@@ -9,7 +9,7 @@ venv/
 coverage
 .coverage
 coverage.xml
-client/dist
+dist
 .DS_Store
 .#*
 \#*#
@@ -24,6 +24,3 @@ node_modules
 .tmp
 .sass-cache
 npm-debug.log
-
-client/cypress/screenshots
-client/cypress/videos

@@ -1,5 +1,5 @@
-client/.tmp/
-client/dist/
+.tmp/
+dist/
 node_modules/
 viz-lib/node_modules/
 .tmp/
