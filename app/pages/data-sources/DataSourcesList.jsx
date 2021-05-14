@@ -108,7 +108,7 @@ class DataSourcesList extends React.Component {
     recordEvent("view", "page", "data_sources/new");
     this.newDataSourceDialog = CreateSourceDialog.showModal({
       types: reject(this.state.dataSourceTypes, "deprecated"),
-      sourceType: "Data Source",
+      sourceType: "数据源",
       imageFolder: IMG_ROOT,
       helpTriggerPrefix: "DS_",
       onCreate: this.createDataSource,
@@ -140,7 +140,7 @@ class DataSourcesList extends React.Component {
         <div className="m-b-15">
           <Button {...newDataSourceProps}>
             <i className="fa fa-plus m-r-5" aria-hidden="true" />
-            New Data Source
+            新建数据源
           </Button>
           <DynamicComponent name="DataSourcesListExtra" />
         </div>

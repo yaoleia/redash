@@ -13,9 +13,9 @@ function wrapSettingsTab(id, options, WrappedComponent) {
     return (
       <div className="settings-screen">
         <div className="container">
-          <PageHeader title="Settings" />
+          <PageHeader title="数据源列表" />
           <div className="bg-white tiled">
-            <Menu selectedKeys={[activeItem && activeItem.title]} selectable={false} mode="horizontal">
+            {/* <Menu selectedKeys={[activeItem && activeItem.title]} selectable={false} mode="horizontal">
               {settingsMenu.getAvailableItems().map(item => (
                 <Menu.Item key={item.title}>
                   <Link href={item.path} data-test="SettingsScreenItem">
@@ -23,7 +23,7 @@ function wrapSettingsTab(id, options, WrappedComponent) {
                   </Link>
                 </Menu.Item>
               ))}
-            </Menu>
+            </Menu> */}
             <div className="p-15">
               <div>
                 <WrappedComponent {...props} />

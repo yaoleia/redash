@@ -110,7 +110,7 @@ function EmptyState({
           show={isAvailable.dataSource}
           completed={isCompleted.dataSource}
           url="data_sources/new"
-          urlText="Connect a Data Source"
+          urlText="连接一个数据源"
         />
       );
     }

@@ -3,7 +3,7 @@ button,
 input,
 i,
 a {
-  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased;
 }
 
 *,
@@ -92,13 +92,18 @@ strong {
 }
 
 .settings-screen {
-  .p-15 {
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: #fff;
-    width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  .container {
     height: 100%;
+    padding: 0;
+    .bg-white.tiled {
+      height: calc(100% - 70px);
+    }
   }
 }
 
