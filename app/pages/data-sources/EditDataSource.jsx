@@ -67,10 +67,11 @@ class EditDataSource extends React.Component {
     };
 
     Modal.confirm({
-      title: "Delete Data Source",
-      content: "Are you sure you want to delete this data source?",
-      okText: "Delete",
+      title: "数据源删除",
+      content: "确认要删除该数据源?",
+      okText: "删除",
       okType: "danger",
+      cancelText: "取消",
       onOk: doDelete,
       onCancel: callback,
       maskClosable: true,
@@ -83,16 +84,16 @@ class EditDataSource extends React.Component {
     DataSource.test({ id: dataSource.id })
       .then(httpResponse => {
         if (httpResponse.ok) {
-          notification.success("Success");
+          notification.success("成功");
         } else {
-          notification.error("Connection Test Failed:", httpResponse.message, { duration: 10 });
+          notification.error("连接测试失败:", httpResponse.message, { duration: 10 });
         }
         callback();
       })
       .catch(() => {
         notification.error(
-          "Connection Test Failed:",
-          "Unknown error occurred while performing connection test. Please try again later.",
+          "连接测试失败:",
+          "执行连接测试时发生未知错误，请稍后再试。",
           { duration: 10 }
         );
         callback();
@@ -107,8 +108,8 @@ class EditDataSource extends React.Component {
       fields,
       type,
       actions: [
-        { name: "Delete", type: "danger", callback: this.deleteDataSource },
-        { name: "Test Connection", pullRight: true, callback: this.testConnection, disableWhenDirty: true },
+        { name: "删除", type: "danger", callback: this.deleteDataSource },
+        { name: "测试连接", pullRight: true, callback: this.testConnection, disableWhenDirty: true },
       ],
       onSubmit: this.saveDataSource,
       feedbackIcons: true,
@@ -120,7 +121,7 @@ class EditDataSource extends React.Component {
         <div className="text-right m-r-10">
           {HELP_TRIGGER_TYPES[helpTriggerType] && (
             <HelpTrigger className="f-13" type={helpTriggerType}>
-              Setup Instructions <i className="fa fa-question-circle" aria-hidden="true" />
+              安装说明 <i className="fa fa-question-circle" aria-hidden="true" />
               <span className="sr-only">(help)</span>
             </HelpTrigger>
           )}

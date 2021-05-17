@@ -399,7 +399,7 @@ const QueryService = {
 QueryService.newQuery = function newQuery() {
   return new Query({
     query: "",
-    name: "New Query",
+    name: "创建 Query",
     schedule: null,
     user: currentUser,
     options: { apply_auto_limit: localOptions.get("applyAutoLimit", true) },

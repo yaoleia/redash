@@ -114,7 +114,7 @@ class CreateSourceDialog extends React.Component {
         <div className="text-right">
           {HELP_TRIGGER_TYPES[helpTriggerType] && (
             <HelpTrigger className="f-13" type={helpTriggerType}>
-              Setup Instructions <i className="fa fa-question-circle" aria-hidden="true" />
+              安装说明 <i className="fa fa-question-circle" aria-hidden="true" />
               <span className="sr-only">(help)</span>
             </HelpTrigger>
           )}

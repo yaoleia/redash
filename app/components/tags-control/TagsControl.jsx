@@ -42,7 +42,7 @@ export class TagsControl extends React.Component {
         {tags.length === 0 && (
           <React.Fragment>
             <i className="zmdi zmdi-plus m-r-5" aria-hidden="true" />
-            Add tag
+            加标签
           </React.Fragment>
         )}
         {tags.length > 0 && (

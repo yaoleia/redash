@@ -13,7 +13,7 @@ export default function PageHeader({ title, actions }) {
 }
 
 PageHeader.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.any,
   actions: PropTypes.node,
 };
 

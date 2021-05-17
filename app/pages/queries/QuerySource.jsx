@@ -271,13 +271,13 @@ function QuerySource(props) {
 
                     <QueryEditor.Controls
                       addParameterButtonProps={{
-                        title: "Add New Parameter",
+                        title: "增加新参数",
                         shortcut: "mod+p",
                         onClick: openAddNewParameterDialog,
                       }}
                       formatButtonProps={{
                         title: isFormatQueryAvailable
-                          ? "Format Query"
+                          ? "格式化 Query"
                           : "Query formatting is not supported for your Data Source syntax",
                         disabled: !dataSource || !isFormatQueryAvailable,
                         shortcut: isFormatQueryAvailable ? "mod+shift+f" : null,
@@ -287,7 +287,7 @@ function QuerySource(props) {
                         queryFlags.canEdit && {
                           text: (
                             <React.Fragment>
-                              <span className="hidden-xs">Save</span>
+                              <span className="hidden-xs">保存</span>
                               {isDirty && !isQuerySaving ? "*" : null}
                             </React.Fragment>
                           ),
@@ -301,7 +301,7 @@ function QuerySource(props) {
                         shortcut: "mod+enter, alt+enter, ctrl+enter, shift+enter",
                         onClick: doExecuteQuery,
                         text: (
-                          <span className="hidden-xs">{selectedText === null ? "Execute" : "Execute Selected"}</span>
+                          <span className="hidden-xs">{selectedText === null ? "运行" : "运行选中"}</span>
                         ),
                       }}
                       autocompleteToggleProps={{

@@ -37,14 +37,16 @@ function EditTagsDialog({ dialog, tags, getAvailableTags }) {
     <Modal
       {...dialog.props}
       onOk={() => dialog.close(values)}
-      title="Add/Edit Tags"
+      okText="确定"
+      cancelText="取消"
+      title="增加/编辑标签"
       className="shortModal"
       wrapProps={{ "data-test": "EditTagsDialog" }}>
       <Select
         ref={setSelectRef}
         mode="tags"
         className="w-100"
-        placeholder="Add some tags..."
+        placeholder="增加标签..."
         defaultValue={values}
         onChange={v => setValues(compact(map(v, trim)))}
         disabled={isLoading}

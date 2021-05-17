@@ -200,7 +200,7 @@ export default function DynamicForm({
             block
             className="extra-options-button"
             onClick={() => setShowExtraFields(currentShowExtraFields => !currentShowExtraFields)}>
-            Additional Settings
+            其它配置
             <i
               className={cx("fa m-l-5", { "fa-caret-up": showExtraFields, "fa-caret-down": !showExtraFields })}
               aria-hidden="true"
@@ -239,6 +239,6 @@ DynamicForm.defaultProps = {
   feedbackIcons: false,
   hideSubmitButton: false,
   defaultShowExtraFields: false,
-  saveText: "Save",
+  saveText: "保存",
   onSubmit: () => {},
 };
