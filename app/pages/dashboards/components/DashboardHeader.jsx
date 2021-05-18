@@ -80,7 +80,7 @@ function RefreshButton({ dashboardConfiguration }) {
       <Tooltip title={refreshRate ? `Auto Refreshing every ${durationHumanize(refreshRate)}` : null}>
         <Button type={buttonType(refreshRate)} onClick={() => refreshDashboard()}>
           <i className={cx("zmdi zmdi-refresh m-r-5", { "zmdi-hc-spin": refreshing })} aria-hidden="true" />
-          {refreshRate ? durationHumanize(refreshRate) : "Refresh"}
+          {refreshRate ? durationHumanize(refreshRate) : "刷新"}
         </Button>
       </Tooltip>
       <Dropdown

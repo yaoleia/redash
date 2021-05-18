@@ -8,7 +8,7 @@ function getSchema(dataSource, refresh = undefined) {
   }
 
   return DataSource.fetchSchema(dataSource, refresh).catch(() => {
-    notification.error("Schema refresh failed.", "Please try again later.");
+    notification.error("Schema 刷新失败！", "请稍后再试。");
     return Promise.resolve([]);
   });
 }

@@ -73,8 +73,8 @@ class AlertsList extends React.Component {
         className: "text-nowrap",
       }
     ),
-    Columns.timeAgo.sortable({ title: "Last Updated At", field: "updated_at", width: "1%" }),
-    Columns.dateTime.sortable({ title: "Created At", field: "created_at", width: "1%" }),
+    Columns.timeAgo.sortable({ title: "上次更新时间", field: "updated_at", width: "1%" }),
+    Columns.dateTime.sortable({ title: "创建于", field: "created_at", width: "1%" }),
   ];
 
   render() {

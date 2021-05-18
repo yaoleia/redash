@@ -2,6 +2,7 @@ import { extend, find, includes, isEmpty, map } from "lodash";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import qs from "query-string";
 import { useDebouncedCallback } from "use-debounce";
 import useMedia from "use-media";
 import Button from "antd/lib/button";
@@ -134,9 +135,10 @@ function QuerySource(props) {
     // choose data source id for new queries
     if (dataSourcesLoaded && queryFlags.isNew) {
       const firstDataSourceId = dataSources.length > 0 ? dataSources[0].id : null;
+      const urlQuery = qs.parse(window.location.search);
       handleDataSourceChange(
         chooseDataSourceId(
-          [query.data_source_id, localStorage.getItem("lastSelectedDataSourceId"), firstDataSourceId],
+          [urlQuery.key, query.data_source_id, localStorage.getItem("lastSelectedDataSourceId"), firstDataSourceId],
           dataSources
         )
       );
@@ -238,7 +240,7 @@ function QuerySource(props) {
                   isEditable={queryFlags.canEdit}
                   markdown
                   ignoreBlanks={false}
-                  placeholder="Add description"
+                  placeholder="增加描述"
                   value={query.description}
                   onDone={updateQueryDescription}
                   multiline
@@ -317,11 +319,11 @@ function QuerySource(props) {
                       dataSourceSelectorProps={
                         dataSource
                           ? {
-                              disabled: !queryFlags.canEdit,
-                              value: dataSource.id,
-                              onChange: handleDataSourceChange,
-                              options: map(dataSources, ds => ({ value: ds.id, label: ds.name })),
-                            }
+                            disabled: !queryFlags.canEdit,
+                            value: dataSource.id,
+                            onChange: handleDataSourceChange,
+                            options: map(dataSources, ds => ({ value: ds.id, label: ds.name })),
+                          }
                           : false
                       }
                     />
@@ -394,7 +396,7 @@ function QuerySource(props) {
                           loading={isQueryExecuting}
                           onClick={doExecuteQuery}>
                           {!isQueryExecuting && <i className="zmdi zmdi-refresh m-r-5" aria-hidden="true" />}
-                          Refresh Now
+                          现在刷新
                         </Button>
                       }
                     />

@@ -90,7 +90,7 @@ function handleErrorResponse(queryResult, error) {
   logger("Unknown error", error);
   queryResult.update({
     job: {
-      error: get(error, "response.data.message", "Unknown error occurred. Please try again later."),
+      error: get(error, "response.data.message", "发生未知错误，请稍后再试。"),
       status: 4,
     },
   });

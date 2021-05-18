@@ -70,7 +70,7 @@ const listColumns = [
   ),
   Columns.custom((text, item) => item.user.name, { title: "Created By", width: "1%" }),
   Columns.dateTime.sortable({
-    title: "Created At",
+    title: "创建于",
     field: "created_at",
     width: "1%",
   }),

@@ -72,16 +72,16 @@ const listColumns = [
       width: null,
     }
   ),
-  Columns.custom((text, item) => item.user.name, { title: "Created By", width: "1%" }),
-  Columns.dateTime.sortable({ title: "Created At", field: "created_at", width: "1%" }),
+  Columns.custom((text, item) => item.user.name, { title: "创建者", width: "1%" }),
+  Columns.dateTime.sortable({ title: "创建于", field: "created_at", width: "1%" }),
   Columns.dateTime.sortable({
-    title: "Last Executed At",
+    title: "上次运行时间",
     field: "retrieved_at",
     orderByField: "executed_at",
     width: "1%",
   }),
   Columns.custom.sortable((text, item) => <SchedulePhrase schedule={item.schedule} isNew={item.isNew()} />, {
-    title: "Refresh Schedule",
+    title: "刷新计划",
     field: "schedule",
     width: "1%",
   }),

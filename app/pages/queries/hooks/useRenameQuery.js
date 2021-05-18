@@ -14,7 +14,7 @@ export default function useRenameQuery(query, onChange) {
 
       if (query.is_draft && clientConfig.autoPublishNamedQueries && name !== "New Query") {
         changes.is_draft = false;
-        options.successMessage = "Query saved and published";
+        options.successMessage = "Query 已保存并发布";
       }
 
       updateQuery(changes, options);

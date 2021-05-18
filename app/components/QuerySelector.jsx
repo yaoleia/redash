@@ -30,7 +30,7 @@ export default function QuerySelector(props) {
   const [selectedQuery, setSelectedQuery] = useState();
   const [doSearch, searchResults, searching] = useSearchResults(search, { initialResults: [] });
 
-  const placeholder = "Search a query by name";
+  const placeholder = "根据名称搜索Query";
   const clearIcon = (
     <i
       className="fa fa-times hide-in-percy"

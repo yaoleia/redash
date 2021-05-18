@@ -113,7 +113,7 @@ function QueryView(props) {
                   shortcut="mod+enter, alt+enter, ctrl+enter"
                   disabled={!queryFlags.canExecute || isExecuting || areParametersDirty}
                   onClick={doExecuteQuery}>
-                  Refresh
+                  刷新
                 </QueryViewButton>
               )}
             </DynamicComponent>
@@ -125,7 +125,7 @@ function QueryView(props) {
             !fullscreen && (
               <PlainButton className="label label-tag hidden-xs" role="none" onClick={() => setAddingDescription(true)}>
                 <i className="zmdi zmdi-plus m-r-5" aria-hidden="true" />
-                Add description
+                增加描述
               </PlainButton>
             )
           }
@@ -138,7 +138,7 @@ function QueryView(props) {
               isEditable={queryFlags.canEdit}
               onDone={updateQueryDescription}
               onStopEditing={() => setAddingDescription(false)}
-              placeholder="Add description"
+              placeholder="增加描述"
               ignoreBlanks={false}
               editorProps={{ autoSize: { minRows: 2, maxRows: 4 } }}
               defaultEditing={addingDescription}
@@ -179,7 +179,7 @@ function QueryView(props) {
                     loading={isExecuting}
                     onClick={doExecuteQuery}>
                     {!isExecuting && <i className="zmdi zmdi-refresh m-r-5" aria-hidden="true" />}
-                    Refresh Now
+                    现在刷新
                   </Button>
                 )
               }

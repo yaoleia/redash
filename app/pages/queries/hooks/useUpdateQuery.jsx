@@ -67,7 +67,7 @@ function doSaveQuery(data, { canOverwrite = false } = {}) {
       }
       return Promise.reject(new SaveQueryConflictError());
     }
-    return Promise.reject(new SaveQueryError("Query could not be saved"));
+    return Promise.reject(new SaveQueryError("Query 不能被保存！"));
   });
 }
 
@@ -75,7 +75,7 @@ export default function useUpdateQuery(query, onChange) {
   const handleChange = useImmutableCallback(onChange);
 
   return useCallback(
-    (data = null, { successMessage = "Query saved" } = {}) => {
+    (data = null, { successMessage = "Query 已保存" } = {}) => {
       if (isObject(data)) {
         // Don't save new query with partial data
         if (query.isNew()) {

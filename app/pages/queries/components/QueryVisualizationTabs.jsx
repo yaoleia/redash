@@ -155,11 +155,11 @@ export default function QueryVisualizationTabs({
             />
           ) : (
             <EmptyState
-              title="Query has no result"
+              title="没有查询到结果"
               message={
                 canRefresh
-                  ? "Execute/Refresh the query to show results."
-                  : "You do not have a permission to execute/refresh this query."
+                  ? "运行/刷新查询以显示结果。"
+                  : "您没有权限运行/刷新该查询。"
               }
               refreshButton={refreshButton}
             />
